@@ -4,10 +4,13 @@
 # Installs applications.
 
 # EXECUTION
+# Crossover 15.2
+install_zip_app "$APP_CROSSOVER_15_2_APP_URL" "$APP_CROSSOVER_15_2_APP_NAME"
+
+
 # Alfred
-
-
 #install_dmg_app "$ALFRED_APP_URL" "$ALFRED_VOLUME_NAME" "$ALFRED_APP_NAME"
+
 
 ## App Cleaner
 #install_zip_app "$APP_CLEANER_APP_URL" "$APP_CLEANER_APP_NAME"

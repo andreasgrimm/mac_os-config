@@ -45,6 +45,9 @@ export CLOAK_APP_NAME=Cloak.app
 export CLOAK_VOLUME_NAME="Cloak"
 export CLOAK_APP_URL="https://static.getcloak.com/downloads/osx/updates/Release/Cloak-2.1.2.dmg"
 
+export APP_CROSSOVER_15_2_APP_NAME=AppCleaner.app
+export APP_CROSSOVER_15_2_APP_URL="https://media.codeweavers.com/pub/crossover/cxmac/demo/crossover-15.2.0.zip"
+
 export DASH_APP_NAME=Dash.app
 export DASH_APP_URL="https://sanfrancisco.kapeli.com/downloads/v3/Dash.zip"
 
