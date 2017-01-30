@@ -18,7 +18,7 @@ export REPO_RUBY_SETUP=v7.0.0
 export REPO_GO_SETUP=v2.1.0
 export REPO_NPM_SETUP=v2.1.0
 export REPO_SUBLIME_TEXT_SETUP=v6.0.0
-export REPO_DOTFILES=v24.2.0
+export REPO_DOTFILES=v1.0.0
 
 # Applications
 export ALFRED_APP_NAME="Alfred 3.app"
