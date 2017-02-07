@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 # DESCRIPTION
 # Sets up and launches (if necessary) installed software.
@@ -15,32 +15,37 @@ chsh -s /usr/local/bin/bash
   git config --local core.hooksPath /dev/null
 )
 
-# Ruby
-printf "%s\n" "---" > "$HOME/.gemrc"
-printf "%s\n" "gem: --no-document" >> "$HOME/.gemrc"
-printf "%s\n" "$MRI" > "$HOME/.ruby-version"
-git clone https://github.com/bkuhlmann/ruby_setup.git
-(
-  cd ruby_setup
-  git checkout $REPO_RUBY_SETUP
-  /usr/local/bin/ruby-install "ruby-$MRI"
-  bin/run i
-)
-rm -rf ruby_setup
+## Ruby
+printf "Version-lockeddown local Ruby (+ individual versions via container) currently skipped. Maybe in favor of rbenv (and no containers)? \n"
+#printf "%s\n" "---" > "$HOME/.gemrc"
+#printf "%s\n" "gem: --no-document" >> "$HOME/.gemrc"
+#printf "%s\n" "$MRI" > "$HOME/.ruby-version"
+#git clone https://github.com/bkuhlmann/ruby_setup.git
+#(
+#  cd ruby_setup
+#  git checkout $REPO_RUBY_SETUP
+#  /usr/local/bin/ruby-install "ruby-$MRI"
+#  bin/run i
+#)
+#rm -rf ruby_setup
 
 # Go
-install_git_project "https://github.com/bkuhlmann/go_setup.git" $REPO_GO_SETUP "go_setup" "bin/run i"
+printf "Go currently skipped\n"
+#install_git_project "https://github.com/bkuhlmann/go_setup.git" $REPO_GO_SETUP "go_setup" "bin/run i"
 
 # NPM
-install_git_project "https://github.com/bkuhlmann/npm_setup.git" $REPO_NPM_SETUP "npm_setup" "bin/run i"
+printf "npm currently skipped. maybe in favor of nvm?\n"
+#install_git_project "https://github.com/bkuhlmann/npm_setup.git" $REPO_NPM_SETUP "npm_setup" "bin/run i"
 
 # Sublime Text Setup
-if [ ! -e "/usr/bin/sublime" ]; then
-  sudo ln -sv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
-fi
-install_git_project "https://github.com/bkuhlmann/sublime_text_setup.git" $REPO_SUBLIME_TEXT_SETUP "sublime_text_setup" "bin/run i"
+printf "Sublime Text Setup currently skipped. needs review/customization.\n"
+#if [ ! -e "/usr/bin/sublime" ]; then
+#  sudo ln -sv "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
+#fi
+#install_git_project "https://github.com/bkuhlmann/sublime_text_setup.git" $REPO_SUBLIME_TEXT_SETUP "sublime_text_setup" "bin/run i"
 
 # Dotfiles
-rm -f $HOME/.bash_profile
-install_git_project "https://github.com/andreasgrimm/dotfiles.git" $REPO_DOTFILES "dotfiles" "bin/run i"
-source $HOME/.bashrc
+printf "Dotfiles currently skipped. needs review/customization.\n"
+#rm -f $HOME/.bash_profile
+#install_git_project "https://github.com/andreasgrimm/dotfiles.git" $REPO_DOTFILES "dotfiles" "bin/run i"
+#source $HOME/.bashrc

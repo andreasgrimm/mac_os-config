@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 # DESCRIPTION
 # Installs Homebrew software.
@@ -9,23 +9,49 @@ if ! command -v brew > /dev/null; then
   ruby -e "$(curl --location --fail --silent --show-error https://raw.githubusercontent.com/Homebrew/install/master/install)"
   export PATH="/usr/local/bin:$PATH"
   printf "export PATH=\"/usr/local/bin:$PATH\"\n" >> $HOME/.bash_profile
-
-  brew tap caskroom/cask
-  #brew tap caskroom/versions
 fi
-
-# Cask Installations
-#######################
-
-# brew cask install micro-snitch
-
-brew cask install java
-brew cask install intel-haxm
-brew cask install torbrowser
-
 
 # Brew Installations
 #######################
+
+# Elm
+brew install elm
+
+# Git
+brew install git
+# configure git where? e.g. settings like: rebase on pull
+
+# GPG Agent
+brew install gpg-agent
+
+# HTTPie
+brew install httpie
+
+# ImageMagick
+brew install imagemagick
+
+# Keybase
+brew install keybase
+
+# Mac App Store CLI
+brew install mas
+
+# Watchman
+brew install watchman
+
+brew install android-sdk
+brew install maven
+brew install w3m
+brew install wget
+
+# still needed upfront?
+#gnupg
+#memcached
+#postgresql
+#python3
+#rbenv
+#homebrew/boneyard/scantailor
+
 
 ## Readline
 #brew install readline
@@ -70,9 +96,6 @@ brew cask install torbrowser
 ## Elasticsearch
 #brew install elasticsearch
 #
-## Elm
-#brew install elm
-#
 ## FFmpeg
 #brew install ffmpeg
 #
@@ -88,17 +111,11 @@ brew cask install torbrowser
 ## Gifsicle
 #brew install gifsicle
 #
-## Git
-#brew install git
-#
 ## Go
 #brew install go
 #
 ## GPG
 #brew install gpg
-#
-## GPG Agent
-#brew install gpg-agent
 #
 ## Graphviz
 #brew install graphviz
@@ -109,20 +126,11 @@ brew cask install torbrowser
 ## Htop
 #brew install htop
 #
-## HTTPie
-#brew install httpie
-#
-## ImageMagick
-#brew install imagemagick
-#
 ## Ioping
 #brew install ioping
 #
 ## JSON CLI Parser
 #brew install jq
-#
-## Keybase
-#brew install keybase
 #
 ## libffi
 #brew install libffi
@@ -135,9 +143,6 @@ brew cask install torbrowser
 #
 ## Lynis
 #brew install lynis
-#
-## Mac App Store CLI
-#brew install mas
 #
 ## Memcached
 #brew install memcached
@@ -218,9 +223,6 @@ brew cask install torbrowser
 #
 ## Vim
 #brew install vim
-#
-## Watchman
-#brew install watchman
 #
 ## Wry
 #brew install wry

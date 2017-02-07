@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 # DESCRIPTION
 # Installs application extensions.
@@ -6,6 +6,13 @@
 # SETUP
 #
 ## EXECUTION
+
+##
+
+## zsh plugins
+
+
+
 ## Sublime Text - Advanced New File
 #install_git_app "$ADVANCED_NEW_FILE_EXTENSION_URL" "$ADVANCED_NEW_FILE_EXTENSION_PATH"
 #
